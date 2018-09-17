@@ -1,2 +1,2 @@
 # cookie-stand
-Monday-Sept-17
+Week 2
