@@ -147,8 +147,23 @@ productSum(centerSum, avgCenterCookies, centerTotal);
 productSum(capitalSum, avgCapitalCookies, capitalTotal);
 productSum(alkiSum, avgAlkiCookies, alkiTotal);
 
-var newEl = document.createElement('li');
-var newText = document.createTextNode('pike');
-newEl.appendChild(newText);
-var position = document.getElementById('pike')[0];
-position.appendChild(newEl);
+// var newEl = document.createElement('li');
+// var newText = document.createTextNode('pike');
+// newEl.appendChild(newText);
+// var position = document.getElementById('pike')[1];
+// position.appendChild(newEl);
+
+var locationsAll = ['8jhljkhljkh', '9', 'seattleCenter', capitolHill, alki];
+//var testAll = ['pike', 'airport', 'center'];
+function makeUL(array) {
+  var list = document.createElement('ul');
+
+  for (var i = 0; i < array.length; i++) {
+    var item = document.createElement('li');
+    item.appendChild(document.createTextNode(array[i]));
+    list.appendChild(item);
+  }
+  return list;
+}
+document.getElementById('airport').appendChild(makeUL(locationsAll[0]));
+makeUL(locationsAll.set0);
