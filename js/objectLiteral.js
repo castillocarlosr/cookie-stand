@@ -106,6 +106,7 @@ var alki = {
         getRandomNumber(this.minimumCustomersAlki, this.maximumCustomersAlki)
       )
       console.log(globalTime[i] + ' = ' + customersAlki[i] + ' random customers');
+      return(globalTime[i] + customersAlki[i])
     }
   }
 };
@@ -150,20 +151,35 @@ productSum(alkiSum, avgAlkiCookies, alkiTotal);
 // var newEl = document.createElement('li');
 // var newText = document.createTextNode('pike');
 // newEl.appendChild(newText);
-// var position = document.getElementById('pike')[1];
+// var position = document.getElementById('center')[0];
 // position.appendChild(newEl);
 
-var locationsAll = ['8jhljkhljkh', '9', 'seattleCenter', capitolHill, alki];
-//var testAll = ['pike', 'airport', 'center'];
-function makeUL(array) {
-  var list = document.createElement('ul');
+// var locationsAll = ['PikeSakes', 'Airpot', 'seattleCenter', capitolHill, alki];
+// //var testAll = ['pike', 'airport', 'center'];
+// function makeUL(array) {
+//   var list = document.createElement('li');
+//   for (var i = 0; i < array.length; i++) {
+//     var item = document.createElement('');
+//     item.appendChild(document.createTextNode(array[i]));
+//     list.appendChild(item);
+//   }
+//   return list;
+// }
+// document.getElementById('pike').appendChild(makeUL(locationsAll[0]);
+//makeUL(locationsAll);
 
-  for (var i = 0; i < array.length; i++) {
-    var item = document.createElement('li');
-    item.appendChild(document.createTextNode(array[i]));
-    list.appendChild(item);
-  }
-  return list;
-}
-document.getElementById('airport').appendChild(makeUL(locationsAll[0]));
-makeUL(locationsAll.set0);
+// var el = document.createElement('li'),
+//   content = document.createTextNode('My sample text'),
+//   myUl = document.getElementById('ulOne');
+
+// el.appendChild(content);
+// el.id = 'pike';
+
+// myUl.appendChild(el);
+// document.getElementById('pike').appendChild(makeUL(locationsAll[0]);
+var pikeArray = [firstAndPike];
+var pikeList = document.getElementById('pike');
+var newLi = document.createElement('li');
+newLi.textContent = pikeArray[0];
+pikeList.appendChild(newLi);
+pikeCSS.classList.add('pike');
