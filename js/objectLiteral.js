@@ -112,7 +112,7 @@ var alki = {
 };
 
 function getRandomNumber(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 function arraySum(array, sum) {
@@ -124,6 +124,7 @@ function arraySum(array, sum) {
 
 function productSum(sum, avgCookies, total) {
   total = sum * avgCookies;
+
   for ( var i = 0; i < locationArray.length; i++) {
     total = locationArray[i];
     return(total);
@@ -182,4 +183,4 @@ var pikeList = document.getElementById('pike');
 var newLi = document.createElement('li');
 newLi.textContent = pikeArray[0];
 pikeList.appendChild(newLi);
-pikeCSS.classList.add('pike');
+//pikeCSS.classList.add('pike');
