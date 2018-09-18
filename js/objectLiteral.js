@@ -39,11 +39,11 @@ var firstAndPike = {
   maximumCustomersPike: 65,
   averageCookies: avgPikeCookies,
   randomCustomers: function() {
-    console.log(locationString[0])
+    console.log(locationString[0]);
     for (var i = 0; i < globalTime.length; i++) {
       customersPike.push(
         getRandomNumber(this.minimumCustomersPike, this.maximumCustomersPike)
-      )
+      );
       console.log(globalTime[i] + ' = ' + customersPike[i] + ' random customers.');
     }
   }
@@ -55,11 +55,11 @@ var seatacAirport = {
   maximumCustomersAir: 24,
   averageCookies: avgAirportCookies,
   randomCustomers: function() {
-    console.log(locationString[1])
+    console.log(locationString[1]);
     for (var i = 0; i < globalTime.length; i++) {
       customersAirport.push(
         getRandomNumber(this.minimumCustomersAir, this.maximumCustomersAir)
-      )
+      );
       console.log(globalTime[i] + ' = ' + customersAirport[i] + ' random customers.');
     }
   }
@@ -70,11 +70,11 @@ var seattleCenter = {
   maximumCustomersCenter: 38,
   averageCookies: avgCenterCookies,
   randomCustomers: function() {
-    console.log(locationString[2])
+    console.log(locationString[2]);
     for (var i = 0; i < globalTime.length; i++) {
       customersCenter.push(
         getRandomNumber(this.minimumCustomersCenter, this.maximumCustomersCenter)
-      )
+      );
       console.log(globalTime[i] + ' = ' + customersCenter[i] + ' random customers.');
     }
   }
@@ -85,11 +85,11 @@ var capitolHill = {
   maximumCustomersCapital: 38,
   averageCookies: avgCapitalCookies,
   randomCustomers: function() {
-    console.log(locationString[3])
+    console.log(locationString[3]);
     for (var i = 0; i < globalTime.length; i++) {
       customersCapital.push(
         getRandomNumber(this.minimumCustomersCapital, this.maximumCustomersCapital)
-      )
+      );
       console.log(globalTime[i] + ' = ' + customersCapital[i] + ' random customers.');
     }
   }
@@ -100,13 +100,13 @@ var alki = {
   maximumCustomersAlki: 16,
   averageCookies: avgAlkiCookies,
   randomCustomers: function() {
-    console.log(locationString[4])
+    console.log(locationString[4]);
     for (var i = 0; i < globalTime.length; i++) {
       customersAlki.push(
         getRandomNumber(this.minimumCustomersAlki, this.maximumCustomersAlki)
-      )
+      );
       console.log(globalTime[i] + ' = ' + customersAlki[i] + ' random customers');
-      return(globalTime[i] + customersAlki[i])
+      return(globalTime[i] + customersAlki[i]);
     }
   }
 };
@@ -117,16 +117,16 @@ function getRandomNumber(min, max) {
 
 function arraySum(array, sum) {
   for (var i = 0; i < array.length; i++) {
-  sum += array[i]
+    sum += array[i];
   }
   return sum;
-};
+}
 
 function productSum(sum, avgCookies, total) {
   total = sum * avgCookies;
-  return console.log(total);
   for ( var i = 0; i < locationArray.length; i++) {
-    total = locationArray[i]
+    total = locationArray[i];
+    return(total);
   }
 }
 
@@ -177,7 +177,7 @@ productSum(alkiSum, avgAlkiCookies, alkiTotal);
 
 // myUl.appendChild(el);
 // document.getElementById('pike').appendChild(makeUL(locationsAll[0]);
-var pikeArray = [firstAndPike];
+var pikeArray = [customersPike[0]];
 var pikeList = document.getElementById('pike');
 var newLi = document.createElement('li');
 newLi.textContent = pikeArray[0];
