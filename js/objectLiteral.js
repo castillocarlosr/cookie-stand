@@ -34,20 +34,23 @@ var centerSum = 0;
 var capitalSum = 0;
 var alkiSum = 0;
 
+
+
 var firstAndPike = {
   minimumCustomersPike: 23,
   maximumCustomersPike: 65,
   averageCookies: avgPikeCookies,
+  hourCookies: [],
+  totalAlkiCookies: []
   randomCustomers: function() {
-    console.log(locationString[0]);
+    //console.log(locationString[0]);
     for (var i = 0; i < globalTime.length; i++) {
       customersPike.push(
         getRandomNumber(this.minimumCustomersPike, this.maximumCustomersPike)
       );
-      console.log(globalTime[i] + ' = ' + customersPike[i] + ' random customers.');
+      //console.log(globalTime[i] + ' = ' + customersPike[i] + ' random customers.');
     }
   }
-
 };
 
 var seatacAirport = {
@@ -115,6 +118,15 @@ function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
+function avgCookiesTotal(){
+  for (var i = 0; i < globalTime.length; i++){
+  this.hourCookies.push(Math.floor(this.averageCookies * this.getRandomNumber()));
+  }
+  return this.hourCookies;
+}
+
+
+
 function arraySum(array, sum) {
   for (var i = 0; i < array.length; i++) {
     sum += array[i];
@@ -149,7 +161,25 @@ productSum(centerSum, avgCenterCookies, centerTotal);
 productSum(capitalSum, avgCapitalCookies, capitalTotal);
 productSum(alkiSum, avgAlkiCookies, alkiTotal);
 
-// var newEl = document.createElement('li');
+var pikeArray = [totalPikeCookies[0]];
+var pikeList = document.getElementById('pike');
+var newLi = document.createElement('li');
+newLi.textContent = pikeArray[0];
+pikeList.appendChild(newLi);
+
+var airportArray = [totalAirportCookies[0]];
+var airportList = document.getElementById('airport');
+var newLi = document.createElement('li');
+newLi.textContent = pikeArray[0];
+pikeList.appendChild(newLi);
+
+var centerArray = [totalCenterCookies[0]];
+var centerList = document.getElementById('center');
+var newLi = document.createElement('li');
+newLi.textContent = pikeArray[0];
+pikeList.appendChild(newLi);
+
+//pikeCSS.classList.add('pike');// var newEl = document.createElement('li');
 // var newText = document.createTextNode('pike');
 // newEl.appendChild(newText);
 // var position = document.getElementById('center')[0];
@@ -178,9 +208,4 @@ productSum(alkiSum, avgAlkiCookies, alkiTotal);
 
 // myUl.appendChild(el);
 // document.getElementById('pike').appendChild(makeUL(locationsAll[0]);
-var pikeArray = [customersPike[0]];
-var pikeList = document.getElementById('pike');
-var newLi = document.createElement('li');
-newLi.textContent = pikeArray[0];
-pikeList.appendChild(newLi);
-//pikeCSS.classList.add('pike');
+

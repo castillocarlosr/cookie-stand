@@ -3,7 +3,7 @@
 
 var globalTime = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm','6:00pm', '7:00pm', '8:00pm'];
 
-// Constructor to generate patCookiesLocation instances
+// Constructor
 function PatCookiesLocation (locationName, minCust, maxCust, avgCookiesPerCust, idPat) {
   this.locationName = locationName;
   this.minCust = minCust;
@@ -34,15 +34,15 @@ PatCookiesLocation.prototype.calcHourlySales = function() {
 
 // Prototype to trigger render of unordered list
 function makeHeaderRow() {
-  var cookieTable = document.getElementById('patCookiesLocationTable');
-  var trEl = document.createElement('tr');
+  var cookieTable = document.getElementById('fullTable');
   var thEl = document.createElement('th');
-  thEl.textContent = ' ';
+  var trEl = document.createElement('tr');
+  thEl.textContent = 'Locations';
   trEl.appendChild(thEl);
   // cookieTable.appendChild(trEl);
 
   var thEl = document.createElement('th');
-  thEl.textContent = 'Daily Location Total';
+  thEl.textContent = 'Daily Total';
   trEl.appendChild(thEl);
 
   for (var i = 0; i < globalTime.length; i++) {
@@ -58,7 +58,7 @@ makeHeaderRow();
 PatCookiesLocation.prototype.render = function() {
   this.calcHourlyCustomers();
   this.calcHourlySales();
-  var cookieTable = document.getElementById('patCookiesLocationTable');
+  var cookieTable = document.getElementById('fullTable');
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
   tdEl.textContent = this.locationName;
@@ -79,6 +79,7 @@ PatCookiesLocation.prototype.render = function() {
 };
 
 // All instances and calls of prototypes to calculate hourly customers, hourly sales, and then render on the page
+//function PatCookiesLocation (locationName, minCust, maxCust, avgCookiesPerCust, idPat)
 var firstAndPike = new PatCookiesLocation('First and Pike', 23, 65, 6.3, 'pikeId');
 firstAndPike.render();
 
@@ -93,3 +94,6 @@ capHill.render();
 
 var alki = new PatCookiesLocation('Alki', 2, 16, 4.6, 'alkiId');
 alki.render();
+
+var totalSales5 = new PatCookiesLocation('Total by hour', 'create for loop', 1, 2, 'allId');
+totalSales5.render();
