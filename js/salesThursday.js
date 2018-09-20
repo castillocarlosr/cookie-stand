@@ -8,11 +8,11 @@ var addForm = document.getElementById('addLocation');
 var salesForm = document.getElementById('locationForm');
 
 // Store Constructor Function
-function PatLocation(locationName, minCust, maxCust, avg) {
+function PatLocation(locationName, minCust, maxCust, avgCook) {
   this.locationName = locationName;
   this.minCust = minCust;
   this.maxCust = maxCust;
-  this.avg = avg;
+  this.avgCook = avgCook;
   this.cookiesPerHour = [];
   this.totalCookies = 0;
 
@@ -27,7 +27,7 @@ PatLocation.prototype.getSales = function() {
     var numCustomers = randMix(
       this.minCust,
       this.maxCust);
-    var hourlyCount = Math.floor(numCustomers * this.avg);
+    var hourlyCount = Math.floor(numCustomers * this.avgCook);
     this.cookiesPerHour.push(hourlyCount);
     this.totalCookies += hourlyCount;
   }
@@ -101,11 +101,11 @@ function renderStores() {
 function handleSubmit(event) {
   event.preventDefault();
   var locationName = event.target.place.value;
-  var min = parseInt(event.target.min.value);
-  var max = parseInt(event.target.max.value);
-  var avg = parseFloat(event.target.avg.value);
+  var minCust = parseInt(event.target.minimum.value);
+  var maxCust = parseInt(event.target.maximum.value);
+  var avgCook = parseFloat(event.target.avgCook.value);
 
-  var addedStore = new PatLocation(locationName, min, max, avg);
+  var addedStore = new PatLocation(locationName, minCust, maxCust, avgCook);
 
   addedStore.render();
 
