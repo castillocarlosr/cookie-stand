@@ -11,9 +11,9 @@ var locationForm = document.getElementById('locationForm');
 
 function PatCookiesLocation (locationName, minCust, maxCust, avgCookiesPerCust, idPat) {
   this.locationName = locationName;
-  this.minCust = minCust;
-  this.maxCust = maxCust;
-  this.avgCookiesPerCust = avgCookiesPerCust;
+  this.minCust = parseInt(minCust);
+  this.maxCust = parseInt(maxCust);
+  this.avgCookiesPerCust = parseInt(avgCookiesPerCust);
   this.idPat = idPat;
   this.hourlyCustomersArray = [];
   this.hourlySalesArray = [];
@@ -150,27 +150,28 @@ makeFooterRow();
 // }
 
 function renderAddLocation(){
-  for(i of formLocation) {
+  for(var i of formLocation) {
     i.render();
   }
 }
 
 function addNewLocation(event){
-  //event.preventDefault();
+  event.preventDefault();
 
   //console.log(event.target.newLocation.value);
 
   var newLocation = event.target.place.value;
-  var newMinumim = event.target.minimum.value;
-  var newMaximum = event.target.maximum.value;
-  var newAvgCookies = event.target.avgCook.value;
+  var newMinumim = parseInt(event.target.minimum.value);
+  var newMaximum = parseInt(event.target.maximum.value);
+  var newAvgCookies = parseInt(event.target.avgCook.value);
   var newIdTag = event.target.idTag.value;
 
-  new PatCookiesLocation(newLocation, newMinumim, newMaximum, newAvgCookies, newIdTag);
-
+  var storeForm = new PatCookiesLocation(newLocation, newMinumim, newMaximum, newAvgCookies, newIdTag);
+  //new PatCookiesLocation(newLocation, newMinumim, newMaximum, newAvgCookies, newIdTag);
   //fullTable.HTML = '';
   makeHeaderRow();
-  //renderAddLocation();
+  storeForm.render();
+  renderAddLocation();
 
 }
 //already at top
