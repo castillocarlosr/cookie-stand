@@ -4,7 +4,9 @@
 var globalTime = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm','6:00pm', '7:00pm', '8:00pm'];
 //var locationArray = [];
 var totalByHour = [];
+var formLocation = [];
 
+//var patLocationsTable = document.getElementById('fullTable');
 var locationForm = document.getElementById('locationForm');
 
 function PatCookiesLocation (locationName, minCust, maxCust, avgCookiesPerCust, idPat) {
@@ -17,6 +19,7 @@ function PatCookiesLocation (locationName, minCust, maxCust, avgCookiesPerCust, 
   this.hourlySalesArray = [];
   this.totalSales = 0;
   this.totalTotal = 0;
+  formLocation.push(this);
   PatCookiesLocation.locationArray.push(this);
 }
 PatCookiesLocation.locationArray = [];
@@ -141,15 +144,40 @@ function hourlyTotal1 () {
 hourlyTotal1();
 makeFooterRow();
 
+// function renderAddLocation(){
+//   for (var k = 0; k < formLocation.length; k++);
+//   //renderAddLocation();
+// }
+
 function renderAddLocation(){
-  for(i of newLocation){
+  for(i of formLocation) {
     i.render();
   }
 }
 
 function addNewLocation(event){
+  //event.preventDefault();
+
+  //console.log(event.target.newLocation.value);
+
+  var newLocation = event.target.place.value;
+  var newMinumim = event.target.minimum.value;
+  var newMaximum = event.target.maximum.value;
+  var newAvgCookies = event.target.avgCook.value;
+  var newIdTag = event.target.idTag.value;
+
+  new PatCookiesLocation(newLocation, newMinumim, newMaximum, newAvgCookies, newIdTag);
+
+  //fullTable.HTML = '';
+  makeHeaderRow();
+  //renderAddLocation();
 
 }
-
+//already at top
+//var locationForm = document.getElementById('locationForm');
 locationForm.addEventListener('submit', addNewLocation);
+
 renderAddLocation();
+makeHeaderRow();
+hourlyTotal1();
+makeFooterRow();
