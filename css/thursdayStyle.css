@@ -1,5 +1,15 @@
+
+/* " */
+#backSeattle{
+    background-image: url(../images/2017-11-18\ 12.53.01.jpg);
+    color: rgb(85, 255, 0);
+    opacity: .94;
+}
+
 html{
-    background:#FF851B;
+    background: #FA8072;
+    margin: 10px;
+    height: 99%;
 }
 img{
     opacity: 0.50;
@@ -9,38 +19,126 @@ img:hover{
     opacity: 1.0;
     filter: drop-shadow(30px 10px 4px #4444dd);
 
-}   
-#fullTable{
-    position: absolute;
-    margin-top: 70px;
-    margin-left: 25px;
-    color: #001f3f;
 }
-#logo{
-
-}
-footer{
-    background-color: black;
+main {
+    padding: 1.1em;
 }
 
-td{
-
+.header::after polygon{
+    fill: white;
 }
-th{
-    
-}
-#pikeId{
 
+th, td, tbody{
+    border-width: 1px 4px 12px 4px;
 }
-#seaTacId{
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid hsla(240, 100%, 25%, 1.0);
+} 
+
+th,td {
+    width: 2px;
+    margin: 1px;
+    border: 1px solid black;
+    padding: 1px
 }
-#seaCenterId{
 
+table.excel {
+    table-layout: auto;
+    width: 180px;    
 }
-#capHillId{
 
+  /* --------- CLASSY LOOK ------------ */
+
+table {
+    width: 80%;
+    margin: 1em;
 }
-#alkiId{
 
+th {
+    font-weight: bold;
+}
+
+table.classy th, table.classy td {
+    margin: 1em;
+    padding: 1em;
+    position: relative;
+    border-left: 1em solid #fff;
+    border-right: 1em solid #fff;
+}
+
+table.classy tr {
+    border-bottom: 1px solid navy;
+    transition: all .1s linear;
+}
+
+table.classy thead tr:first-child {
+    border-bottom: 3px solid navy;
+    color: navy;
+}
+
+table.classy tbody tr:hover {
+    background: #444;
+    color: #fff;
+}
+
+/* --------- EXCEL LOOK ------------ */
+table.excel {
+    border-radius: 6px;
+}
+
+table.excel thead {
+    background: #ccc;
+    border: 1px solid #ccc;
+}
+
+table.excel th {
+    border: 1px groove #eee;
+    font-size: 1em;
+    padding: .25em;
+    text-align: left;
+}
+
+table.excel tbody {
+    border: 1px solid #eee;
+}
+
+table.excel td {
+    border: 1px solid #eee;
+    font-size: .9em;
+    padding: .1em;
+}
+
+table.excel td:hover {
+    background: aliceblue;
+}
+
+table.excel tr td:first-child {
+    background: #eee;
+    border: none;
+}
+
+/*------------end of excel----*/
+
+.aboutUs{
+    color: rgb(245, 12, 12);
+    transform-origin: 50% 50% 0px; 
+    left: 0px; 
+    top: 0px; 
+    width: 600px; 
+    height: 400px; 
+    z-index: 10002; 
+    opacity: 1; 
+    display: block; 
+    outline: transparent solid 1px;
+}
+a{
+    color: rgb(12, 12, 12);
+    width: 10em;
+    position: right;
+    left: 250px;
+    border: .25px solid #4444dd;
+   
 }

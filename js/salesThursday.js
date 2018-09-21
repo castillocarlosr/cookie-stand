@@ -7,7 +7,6 @@ var tfoot = document.getElementsByTagName('tfoot')[0];
 var addForm = document.getElementById('addLocation');
 var salesForm = document.getElementById('locationForm');
 
-// Store Constructor Function
 function PatLocation(locationName, minCust, maxCust, avgCook) {
   this.locationName = locationName;
   this.minCust = minCust;
@@ -46,13 +45,12 @@ PatLocation.prototype.render = function(locationIndex) {
   addElement('td', this.totalCookies, tr);
 };
 
-// func: rando(min,max)
 function randMix(min, max) {
   var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
   return randomNumber;
 }
 
-// DOM Magical time saver
+// DOM Crazy Magic
 function addElement(element, content, parent) {
   var newElement = document.createElement(element);
   var newContent = document.createTextNode(content);
@@ -64,7 +62,7 @@ function addElement(element, content, parent) {
 function renderHeader() {
   thead.innerHTML = '';
   var tr = addElement('tr', '', thead);
-  addElement('th', '', tr);
+  addElement('th', 'Open Locations', tr);
   for (var i = 0; i < globalTime.length; i++) {
     addElement('th', globalTime[i], tr);
   }
@@ -80,9 +78,9 @@ function renderFooter() {
 
   for (var i = 0; i < globalTime.length; i++) {
     var hourTotal = 0;
-    for (var x = 0; x < PatLocation.allLocations.length; x++) {
-      hourTotal += PatLocation.allLocations[x].cookiesPerHour[i];
-      grandTotal += PatLocation.allLocations[x].cookiesPerHour[i];
+    for (var k = 0; k < PatLocation.allLocations.length; k++) {
+      hourTotal += PatLocation.allLocations[k].cookiesPerHour[i];
+      grandTotal += PatLocation.allLocations[k].cookiesPerHour[i];
     }
     addElement('th', hourTotal, tr);
   }
@@ -97,7 +95,7 @@ function renderStores() {
   }
 }
 
-// Add a new store
+// Add Pat's new cookie store
 function handleSubmit(event) {
   event.preventDefault();
   var locationName = event.target.place.value;
@@ -133,3 +131,16 @@ renderHeader();
 renderStores();
 renderFooter();
 
+
+//for the awesome "excel" link that goes with CSS
+var links = document.getElementsByClassName('switcher');
+
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener('click', switchTableClass);
+}
+
+function switchTableClass(event) {
+  event.preventDefault();
+  var table = document.getElementById('myTable');
+  table.className = event.target.dataset['table'];
+}
