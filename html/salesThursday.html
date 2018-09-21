@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sales</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/thursdayStyle.css" />
+  </head>
+  
+  <body>
+    <header>
+    <h1 class="header">Pat's Seattle Salmon Cookies: Sales Report</h1>
+    <img src="../images/salmon.png" alt="Pat's Salmon Cookies Logo"/>
+    </header>
+
+    <main>
+      <section>
+        <form id="locationForm">
+          <!-- <table id="fullTable"> -->
+
+              <a class='switcher' href='#' data-table='excel'>Excel</a>
+    &#183;
+    <a class='switcher' href='#' data-table='classy'>Classy</a>
+
+    <table id='myTable' class="excel">
+
+            <thead></thead>
+            <tbody></tbody>
+            <tfoot></tfoot>
+          </table>
+        </form>
+      </section>
+      <section>
+        <form id="addLocation">
+          <fieldset>
+            <legend>Add new location.</legend>
+
+            <label for="place">Location Name</label>
+            <input type="text" name="place">
+            
+            <label for="minimum">Minimum Customers per Hour</label>
+            <input type="number" name="minimum">
+        
+            <label for="maximum">Maximum Customers per Hour</label>
+            <input type="number" name="maximum">
+        
+            <label for="avgCook">Average Cookies per Customers</label>
+            <input type="text" name="avgCook">
+            
+            <button>Create the New Location</button>
+          </fieldset> 
+        </form>
+        <a href="../index.html">Link to Customer Home Page</a>
+      </section>
+
+    </main>
+    <footer>Designed by a Code Fellows student....Carlos C.
+       <script src="../js/salesThursday.js"></script> 
+    </footer>
+  </body>
+</html>
