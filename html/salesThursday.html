@@ -15,14 +15,12 @@
     <main>
       <section>
         <form id="locationForm">
-          <!-- <table id="fullTable"> -->
 
               <a class='switcher' href='#' data-table='excel'>Excel</a>
     &#183;
     <a class='switcher' href='#' data-table='classy'>Classy</a>
 
-    <table id='myTable' class="excel">
-
+          <table id='myTable' class="excel">
             <thead></thead>
             <tbody></tbody>
             <tfoot></tfoot>
@@ -34,8 +32,8 @@
           <fieldset>
             <legend>Add new location.</legend>
 
-            <label for="place">Location Name</label>
-            <input type="text" name="place">
+            <div  class="addPlace"><labelfor="place">Location Name</label></div>
+            <input class="addPlace" type="text" name="place">
             
             <label for="minimum">Minimum Customers per Hour</label>
             <input type="number" name="minimum">
@@ -49,7 +47,7 @@
             <button>Create the New Location</button>
           </fieldset> 
         </form>
-        <a href="../index.html">Link to Customer Home Page</a>
+        <a href="../index.html"  class="salesLink">Link to Customer Home Page</a>
       </section>
 
     </main>
