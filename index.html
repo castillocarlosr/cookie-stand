@@ -8,7 +8,7 @@
   <body>
     <header>
     <h1 class="header">Pat's FAMOUS Seattle Salmon Cookies</h1>
-    <img src="images/salmon.png" alt="Pat's Salmon Cookies Logo"/>
+    <img id="salmon2" src="images/salmon.png" alt="Pat's Salmon Cookies Logo"/>
     </header>
 <div id="backSeattle">
     <main>
@@ -23,8 +23,9 @@
         <h1>Store locations</h1>
         <h2>Hours 9:00 am - 8:00 pm</h2>
         <h3>Everday.  7 days a week.  Inlcuding holidays.</h3>
-        <ul>
-            <li><a href="https://binged.it/2DhRVnb"> First and Pike</a></li>
+        <h4 class="locationsFront">Click a location below for directions!</h4>
+        <ul class="locationsFront">
+          <li><a href="https://binged.it/2DhRVnb"> First and Pike</a></li>
           <li><a href="https://binged.it/2DkHbVn"> Sea-Tac Airport</a></li>
           <li><a href="https://binged.it/2DrMylI"> Seattle Center</a></li>
           <li><a href="https://binged.it/2DgDdNt"> Capital Hill</a></li>
@@ -36,17 +37,18 @@
         <section>
           <h1>Merchandise</h1>
           <ul>
-            <li>Cookie Cutter</li>
+            <li>Cookie Cutter: $9.99</li>
             <img src="/images/cutter.jpeg">
-            <li>Fish toys</li>
+            <li>Fish toys $11.99</li>
             <img src="/images/fish.jpg">
-            <li>t-shirts</li>
+            <li>t-shirts $12.99</li>
             <img src="/images/shirt.jpg">
           </ul>
         </section>
+
         <section>
           <h2>Cooooooookies</h2>
-          <p> Want cookies delivered.  Fill out the form below.</p>
+          <p> Want cookies delivered.  Fill out the form below.  Minumin $50 delivery!</p>
         </section>
       </main>
 
@@ -64,18 +66,20 @@
               <li>Sibling2: Dash</li>
               <li>Sibling3: Jack-Jack</li>
             </ol>
-            <img src="/images/family.jpg">
+            <img id="familyFront" src="/images/family.jpg">
           </section>
           <section class="aboutUs">
             <h2>F & Q</h2>
             <p>Have a question?</p>
           </section class="aboutUs">
+          <textarea name="comment" form="usrform">    Enter your comments here.  Maybe your love for cats.  Or how awesome cats are!</textarea>
+          <div class="footerFront">
             <p>Below is the sales report for all locations.  It's really meant for empoyees but we just like sharing.  So you can click if you want.</p>
-            <a href="html/salesThursday.html" id="salesLink">Sales Report</a>
-            <link>
+            <a href="html/salesThursday.html" id="salesLink">Sales Report:  CLICK HERE!</a>
         </main>
+        </div>
 </div>
 
-    <footer>Designed by a Code Fellows student....Carlos C.</footer>
+    <footer class="footerFront">Designed by a Code Fellows student....Carlos C.</footer>
   </body>
 </html>
