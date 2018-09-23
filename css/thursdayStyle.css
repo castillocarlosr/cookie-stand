@@ -3,7 +3,7 @@
 
 
 #backSeattle{
-    background-image: url(../images/IMG_2002.png);
+    background-image: url(../images/Needle.png);
     background-repeat: no-repeat;
     background-size: 124em;
     border: 2px solid;
@@ -157,8 +157,7 @@ table.excel tr td:first-child {
     transform-origin: 50% 50% 0px; 
     left: 0px; 
     top: 20px; 
-    width: 600px; 
-    height: 700px; 
+    width: 600px;  
     z-index: 10002; 
     opacity: 1; 
     display: block; 
@@ -200,4 +199,10 @@ textarea{
     background:#6cf;
     margin-bottom: 444em;
 
+}
+
+.salesLink:hover{
+    opacity: .75;
+    filter: drop-shadow(4px 4px 4px #e8e8e9);
+    color: #4444dd;
 }
